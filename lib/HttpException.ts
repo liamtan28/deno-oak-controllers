@@ -1,6 +1,6 @@
 import { EHttpStatus } from "../models/transport.ts";
 
-class HttpException {
+export class HttpException {
   private error: string;
   private status: EHttpStatus;
   public constructor(error: string, status: EHttpStatus) {
@@ -15,4 +15,3 @@ class HttpException {
     };
   }
 }
-export default HttpException;

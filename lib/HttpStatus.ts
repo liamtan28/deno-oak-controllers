@@ -1,4 +1,4 @@
-export default (code: number): any => (
+export const HttpStatus = (code: number): any => (
   target: any,
   propertyKey: string
 ): void => {

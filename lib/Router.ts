@@ -1,14 +1,14 @@
 import { Router as OakRouter } from "https://deno.land/x/oak/mod.ts";
 
 import { RouteDefinition, EHttpMethod } from "../models/transport.ts";
-import HttpException from "./HttpException.ts";
+import { HttpException } from "./HttpException.ts";
 
 /**
  * The bread and butter Router class, responsible for reading all metadata
  * defined by controllers and their methods, and appropriately setting
  * up the vanilla express router to behave as expected
  */
-class Router {
+export class Router {
   // This value is returned and provided to the app once all metadata has
   // been appropriately converted to route handlers here
   private router: OakRouter;
@@ -190,5 +190,3 @@ class Router {
     };
   }
 }
-
-export default Router;
